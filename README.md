@@ -91,7 +91,7 @@ This project was developed as part of my transition from Neonatal Intensive Care
 
 ### Database
 
-* PostgreSQL
+* MySQL
 
 ### Version Control
 
