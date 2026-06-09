@@ -107,7 +107,7 @@ This project was developed as part of my transition from Neonatal Intensive Care
 * Delivery
 * Newborn
 * Neonatal Control
-* Hospitalization
+* Neonatal Outcome
 
 ---
 
