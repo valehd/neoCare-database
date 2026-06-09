@@ -82,12 +82,13 @@ This project was developed as part of my transition from Neonatal Intensive Care
 
 ### Backend
 
-* Java
-* Spring Boot
+* Python
+* Pandas
 
-### Frontend
+### Dashboard
+* Streamlit
+* Plotly
 
-* React
 
 ### Database
 
