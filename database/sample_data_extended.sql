@@ -33,7 +33,7 @@ VALUES
 (15, 39, 8, FALSE, 'None');
 
 
---Deliveries (6-15)
+-- Deliveries (6-15)
 INSERT INTO delivery (
     id_pregnancy,
     delivery_type,
@@ -57,7 +57,7 @@ VALUES
 (14, 'Cesarean', 3, TRUE, FALSE, TRUE, TRUE, 0, 'Live Birth'),
 (15, 'Vaginal', 4, FALSE, TRUE, TRUE, TRUE, 2, 'Live Birth');
 
---Newborns (6-15)
+-- Newborns (6-15)
 INSERT INTO newborn (
     id_delivery,
     birth_date,
@@ -82,7 +82,7 @@ VALUES
 (14, '2026-04-20', '16:15', 'Male', 2700, 47.0, 32.5, 8, 9, 36),
 (15, '2026-04-25', '10:05', 'Female', 3400, 50.0, 34.5, 9, 10, 39);
 
---Neonatal Controls (6-15)
+-- Neonatal Controls (6-15)
 INSERT INTO neonatal_control (
     id_newborn,
     hour_of_life,
@@ -124,7 +124,7 @@ VALUES
 (15,1,142,40,36.8,98,TRUE,FALSE),
 (15,2,138,38,36.9,99,TRUE,TRUE);
 
---Neonatal Outcomes (6-15)
+-- Neonatal Outcomes (6-15)
 INSERT INTO neonatal_outcome (
     id_newborn,
     destination,
