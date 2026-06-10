@@ -164,7 +164,31 @@ NeoCare Dashboard
 A Streamlit-based analytics dashboard built on top of this database.
 
 ---
+## Repository Structure
 
+schema/
+    Database schema and table definitions
+
+data/
+    Sample datasets for testing and dashboard development
+
+analytics/
+    SQL queries used for reporting and dashboard metrics
+
+ ---
+
+## Skills Demonstrated
+
+- Relational Database Design
+- Data Modeling
+- SQL
+- Primary and Foreign Keys
+- Referential Integrity
+- Healthcare Data Management
+- Database Documentation
+
+
+---
 ## Author
 
 Valentina Hernández
