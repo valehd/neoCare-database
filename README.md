@@ -1,124 +1,167 @@
-# NeoCare Dashboard
+# NeoCare Database
 
 ## Overview
 
-NeoCare Dashboard is a full-stack healthcare application designed to support maternal and neonatal monitoring through structured clinical data collection, analytics, and interactive dashboards.
+NeoCare Database is a relational healthcare database designed to support maternal and neonatal clinical data management.
 
-The system models the maternal-neonatal care pathway, from pregnancy and labor to neonatal adaptation during the first hours of life.
+The database models the maternal-neonatal care pathway, covering pregnancy, labor and delivery, newborn assessment, neonatal monitoring, and clinical outcomes.
 
-This project was developed as part of my transition from Neonatal Intensive Care Unit (NICU) Midwife to Software Engineering, combining clinical expertise with software development.
+This project was developed as part of my transition from Neonatal Intensive Care Unit (NICU) Midwife to Software Engineering, combining healthcare expertise with database design and data management.
 
 ---
 
 ## Project Objectives
 
-* Design and implement a relational healthcare database.
-* Build RESTful APIs for clinical data management.
-* Visualize maternal and neonatal indicators through dashboards.
-* Apply software engineering principles to a real-world healthcare scenario.
+* Design a normalized relational healthcare database.
+* Model real-world maternal and neonatal clinical workflows.
+* Implement relationships using primary and foreign keys.
+* Support analytics, reporting, and dashboard applications.
+* Serve as the data layer for the NeoCare Dashboard project.
 
 ---
 
-## Core Modules
-
-### Maternal Information
-
-* Maternal demographics
-* Blood type
-* Previous pregnancies
-* Previous delivery history
-* Associated maternal conditions
-
-### Pregnancy Management
-
-* Prenatal gestational age
-* Pregnancy-related conditions
-* Clinical observations
-
-### Labor and Delivery
-
-* Type of delivery
-* Rupture of membranes duration
-* Antibiotic administration
-* Oxytocin use
-* Significant companion during labor
-* Intrapartum monitoring
-* Number of vaginal examinations
-* Delivery outcome
-
-### Newborn Assessment
-
-* Birth date and time
-* Sex
-* Birth weight
-* Length
-* Gestational age by physical examination
-* APGAR scores
-
-### Neonatal Monitoring
-
-* First-hour vital signs
-* Second-hour vital signs
-* Urination and stool elimination
-* Neonatal destination
-* Hospitalization tracking
-
----
-
-## Planned Dashboard Metrics
-
-* Birth statistics
-* Delivery type distribution
-* Gestational age analysis
-* APGAR score trends
-* Birth weight distribution
-* Maternal risk factors
-* Neonatal hospitalization rates
-* Neonatal adaptation indicators
-
----
-
-## Technology Stack
-
-### Backend
-
-* Python
-* Pandas
-
-### Dashboard
-* Streamlit
-* Plotly
-
-
-### Database
+## Database Engine
 
 * MySQL
 
-### Version Control
+---
 
-* Git
-* GitHub
+## Database Design
+
+### Core Entities
+
+#### Mother
+
+Stores maternal demographic and clinical information.
+
+Key attributes:
+
+* Age
+* Blood type
+* Parity
+* Previous deliveries
+* Maternal conditions
 
 ---
 
-## Database Entities
+#### Pregnancy
 
-* Mother
-* Pregnancy
-* Delivery
-* Newborn
-* Neonatal Control
-* Neonatal Outcome
+Stores prenatal pregnancy information.
+
+Key attributes:
+
+* Prenatal gestational age
+* Prenatal control count
+* Multiple pregnancy indicator
+* Pregnancy conditions
 
 ---
 
-## Future Enhancements
+#### Delivery
 
-* Authentication and authorization
-* Clinical report generation
-* Data export functionality
-* Advanced analytics
-* Healthcare quality indicators
+Stores labor and delivery information.
+
+Key attributes:
+
+* Delivery type
+* Rupture of membranes duration
+* Antibiotic administration
+* Oxytocin use
+* Intrapartum monitoring
+* Delivery outcome
+
+---
+
+#### Newborn
+
+Stores neonatal assessment data at birth.
+
+Key attributes:
+
+* Sex
+* Birth weight
+* Length
+* Gestational age
+* APGAR scores
+
+---
+
+#### Neonatal Control
+
+Stores neonatal adaptation and monitoring information.
+
+Key attributes:
+
+* Heart rate
+* Respiratory rate
+* Temperature
+* Oxygen saturation
+* Urination
+* Stool elimination
+
+---
+
+#### Neonatal Outcome
+
+Stores neonatal destination and hospitalization outcomes.
+
+Key attributes:
+
+* Destination
+* Admission reason
+
+---
+
+## Entity Relationships
+
+Mother
+→ Pregnancy
+→ Delivery
+→ Newborn
+→ Neonatal Control
+
+Newborn
+→ Neonatal Outcome
+
+The database uses primary and foreign key constraints to maintain referential integrity.
+
+---
+
+## Files
+
+### schema.sql
+
+Contains all database creation scripts:
+
+* Tables
+* Primary Keys
+* Foreign Keys
+* Constraints
+
+### sample_data.sql
+
+Contains sample data for testing and dashboard development.
+
+---
+
+## Use Cases
+
+The database supports:
+
+* Maternal health analytics
+* Neonatal monitoring
+* Clinical reporting
+* Healthcare dashboards
+* Data visualization projects
+* Educational healthcare software development
+
+---
+
+## Related Project
+
+NeoCare Dashboard
+
+A Streamlit-based analytics dashboard built on top of this database.
 
 ---
 
@@ -128,4 +171,4 @@ Valentina Hernández
 
 Software Engineering Student | Former NICU Midwife
 
-Focused on Healthcare Technology, Health Informatics, and Digital Transformation.
+Focused on Healthcare Technology, Health Informatics, Databases, and Digital Transformation.
